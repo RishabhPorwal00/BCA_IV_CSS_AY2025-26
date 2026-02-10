@@ -447,6 +447,77 @@ Create a program that:
 
 ---
 
+## 📝 Experiment 8: Check if a Number is Positive, Negative, or Zero
+
+**Objective:** Apply if-else statements to classify numbers based on their sign  
+**Mandatory Practical Requirement:** Official Experiment #8 (Unit 2)  
+**Learning:** Decision making with comparison operators
+
+<details>
+  <summary><strong>Click to reveal solutions</strong></summary>
+
+### Method 1: Manual Comparison (Without Built-ins)
+
+```javascript
+// Experiment 8: Classify a number as positive, negative, or zero
+// Method 1: Direct if-else logic
+
+const number = 15;  // Change this value to test
+
+if (number > 0) {
+    console.log(number + " is a positive number");
+} else if (number < 0) {
+    console.log(number + " is a negative number");
+} else {
+    console.log(number + " is zero");
+}
+
+// Example outputs:
+// 15 is a positive number
+// 0 is zero
+// -8 is a negative number
+```
+
+### Method 2: Using Ternary Operator (Smart Way)
+
+```javascript
+// Experiment 8: Classify a number (Using ternary operator)
+// Method 2: Concise ternary notation
+
+const number = 15;
+
+const classification = (number > 0) ? "positive" 
+                     : (number < 0) ? "negative"
+                     : "zero";
+
+console.log(number + " is " + classification);
+
+// Or even more concise with arrow function:
+const classifyNumber = (num) => (num > 0) ? "positive" : (num < 0) ? "negative" : "zero";
+console.log(classifyNumber(15));  // Output: positive
+```
+
+### Test Cases
+
+```javascript
+// Test with different values
+console.log("Test 1: number = 42");
+const result1 = (42 > 0) ? "positive" : (42 < 0) ? "negative" : "zero";
+console.log("Expected: positive | Got: " + result1);
+
+console.log("\nTest 2: number = -7");
+const result2 = (-7 > 0) ? "positive" : (-7 < 0) ? "negative" : "zero";
+console.log("Expected: negative | Got: " + result2);
+
+console.log("\nTest 3: number = 0");
+const result3 = (0 > 0) ? "positive" : (0 < 0) ? "negative" : "zero";
+console.log("Expected: zero | Got: " + result3);
+```
+
+</details>
+
+---
+
 ## ✅ Checklist
 
 - [ ] Understand difference between expressions and statements
@@ -455,6 +526,7 @@ Create a program that:
 - [ ] Understand the environment concept
 - [ ] Can write programs that store and use variables
 - [ ] Completed all 5 exercises
+- [ ] Completed Experiment 8
 - [ ] Challenge questions attempted
 
 ---
